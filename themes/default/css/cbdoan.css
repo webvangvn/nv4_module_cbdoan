@@ -1,0 +1,105 @@
+/*--Tooltip Styles--*/
+.tip {
+    color: #000000;
+    background:#FFF;
+    padding:5px;
+    position:absolute;   
+    z-index:1000;
+    border: 9px solid #cacdd0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width:450px;
+	opacity:0.9;
+	filter:alpha(opacity=90); /* For IE8 and earlier */
+}
+.tooltip{
+	opacity:1;
+}
+.tooltip .tip { display:none; }
+
+.tip .tooltip_img{
+   border:#ffe13b 1px solid;
+   background: #FFFFFF;
+   margin-top: 3px;
+   padding:2px;
+} 
+
+table .tooltip_img{
+   border:#ffe13b 1px solid;
+   background: #FFFFFF;
+   margin: 3px 0 0 10px;;
+   padding:2px;
+   width: 130px;
+} 
+
+table {margin: 0; width: 100%}
+table tr td {padding: 3px}
+
+.name { color: blue; font-weight: bold }
+
+h5 { margin-top: 10px }
+
+.page { margin: 10px 0; text-align: center }
+
+.form1 { float: right; margin-bottom: 10px}
+
+.box-notice
+{
+	background-color: #feffdf;
+	width: 90%;
+	margin: 10px auto;
+	overflow: hidden;
+    border: 1px solid
+    rgb(215, 215, 215);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.notice 
+{
+	margin: 10px;
+	text-shadow: 1px 1px 2px #C2C2C2;
+	font-size:15px; 
+	color: green; 
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+
+.statics{margin: 10px; display: block-inline}
+
+.gt { text-align: center;  }
+
+hr { border:dashed #00CCFF; border-width:1px 0 0; height:0; }
+
+.searchtip {color: red; font-weight: bold}
+
+.search_icon {background: url('../images/icons/search.png') no-repeat left center;padding-left: 15px;}
+.icon_edit {background: url('../images/icons/edit.png') no-repeat left center; padding-left: 15px;}
+.icon_del {background: url('../images/icons/bad.png') no-repeat left center; padding-left: 15px;}
+.icon_web {background: url('../images/cbdoan/web.png') no-repeat left center; padding-left: 15px;}
+.icon_email {background: url('../images/cbdoan/email.png') no-repeat left center; padding-left: 15px;}
+.icon_dot {background: url('../images/cbdoan/bullet-orange.png') no-repeat left center; padding-left: 10px; font-weight: bold}
+
+.shadow {
+display: block;
+width: 100%;
+height: 32px;
+background: url('../images/cbdoan/shadow_box.png') bottom center;
+}
+
+.cv1 {color: red; font-weight: bold; background: url('../images/cbdoan/bullet_star.png') no-repeat left center; padding-left: 15px;}
+.cv2 {color: green; font-weight: bold; background: url('../images/cbdoan/bullet_star.png') no-repeat left center; padding-left: 15px; margin-left: 10px}
+.cv3 {color: blue; font-weight: bold; background: url('../images/cbdoan/bullet_star.png') no-repeat left center; padding-left: 15px; margin-left: 10px}
+
+.ten { color: red; font-weight: bold; text-transform: uppercase }
+
+.skype{
+	height: 20px;
+	margin-top: -15px;
+}

@@ -1,0 +1,17 @@
+/* css */
+.quytac
+{
+	line-height: 20px;
+	font-size: 14px;
+	color: red;
+}
+
+h4
+{
+	margin-top: 10px;
+	color: red;
+}
+
+.form-control{
+	display:inline-block;
+}
