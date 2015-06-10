@@ -208,13 +208,29 @@
 	//]]>
 </script>	
 <script type="text/javascript">
+	//<![CDATA[
+	document.getElementById('add_cbdoan').setAttribute("autocomplete", "off");
+	$(function() {
+		$("#birthday,#nvdoan,#nvdang").datepicker({
+			showOn : "both",
+			dateFormat : "dd/mm/yy",
+			changeMonth : true,
+			changeYear : true,
+			showOtherMonths : true,
+			buttonImage : nv_siteroot + "images/calendar.gif",
+			buttonImageOnly : true,
+			yearRange: "-99:+0"
+		});
+		
+	});
 	$("input[name=selectimg]").click(function()
 	{
 		var area = "pic_path"; // return value area
 		var type = "image";
 		var path = "{PATH}";
-		nv_open_browse_file("{BROWSER}");
+		nv_open_browse("{BROWSER}");
 		return false;
 	});
+	//]]>
 </script>
 <!-- END: main -->
