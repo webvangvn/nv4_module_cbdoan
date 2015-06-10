@@ -15,12 +15,11 @@ $page_title = $module_info['custom_title'];
 $xtpl = new XTemplate( "detail.tpl", NV_ROOTDIR . "/themes/" . $module_info['template'] . "/modules/" . $module_file );
 $xtpl->assign( 'LANG', $lang_module );
 
-if($global_config['is_url_rewrite']==0)
-{
+
     $id  = $array_op[1];
     $id=explode('-', $id);
     $id=$id[0];
-}
+
    $result = $db->query( "SELECT config_name, config_value FROM " . NV_CONFIG_GLOBALTABLE . " WHERE lang='".NV_LANG_DATA."' AND module='".$module_data."'" );
 	$module_config = array();
 	while( list( $c_config_name, $c_config_value ) = $result->fetch( 3 ) )
@@ -33,12 +32,11 @@ if(!$id)
     Header("Location: " . NV_BASE_SITEURL . "index.php?" . NV_LANG_VARIABLE . "=" . NV_LANG_DATA . "&amp;" . NV_NAME_VARIABLE . "=" . $module_name);
 }
     
-$sql = "SELECT CB.*, CV.tenchucvu AS CHUCVU1, CV2.tenchucvu AS CHUCVU2, CV3.tenchucvu AS CHUCVU3, DV.tendonvi  FROM " . NV_PREFIXLANG . "_" . $module_data . " 
+$sql = "SELECT CB.*, CV.tenchucvu AS chucvu1, CV2.tenchucvu AS chucvu2, CV3.tenchucvu AS chucvu3, DV.tendonvi  FROM " . NV_PREFIXLANG . "_" . $module_data . " 
     CB LEFT JOIN " . NV_PREFIXLANG . "_" . $module_data . "_chucvu CV ON CB.macvu1=CV.macvu LEFT JOIN " 
     . NV_PREFIXLANG . "_" . $module_data . "_chucvu CV2 ON CB.macvu2=CV2.macvu
     LEFT JOIN " . NV_PREFIXLANG . "_" . $module_data . "_chucvu CV3 ON CB.macvu3=CV3.macvu
     LEFT JOIN " . NV_PREFIXLANG . "_" . $module_data . "_donvi DV ON CB.madvi=DV.madvi WHERE id = " . $id;
-
 $result = $db->query( $sql );
 
 while( $row = $result->fetch() )
@@ -70,6 +68,7 @@ while( $row = $result->fetch() )
     $skype = $row['skype'];
     $phone = $row['phone'];
     $tt = $row['tomtat'];
+	
     $xtpl->assign( 'TITLE', sprintf($lang_module['tieudecb'], $row['hoten'] ));
     $xtpl->assign( 'ROW', $row );
 }

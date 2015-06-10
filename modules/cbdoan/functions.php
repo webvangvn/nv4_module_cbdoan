@@ -13,8 +13,7 @@ if( ! defined( 'NV_SYSTEM' ) ) die( 'Stop!!!' );
 define( 'NV_IS_MOD_CBDOAN', true );
 require_once NV_ROOTDIR . "/modules/" . $module_name . '/global.functions.php';
 
-if($global_config['is_url_rewrite']==1)
-{
+
 	$count_op = sizeof( $array_op );
 
 	if( ! empty( $array_op ) and $op == "main" )
@@ -36,4 +35,4 @@ if($global_config['is_url_rewrite']==1)
 			}
 		}
 	}
-}
+

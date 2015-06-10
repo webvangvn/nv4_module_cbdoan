@@ -173,14 +173,9 @@ foreach( $data AS $cbdoan )
 	$cbdoan['ngsinh'] = nv_date( 'd/m/Y', $cbdoan['ngsinh'] );
     $xtpl->assign('CBDOAN', $cbdoan);
     
-	if($global_config['is_url_rewrite']==1)
-	{
-		$xtpl->assign( 'DETAIL', NV_BASE_SITEURL . "index.php?" . NV_LANG_VARIABLE . "=" . NV_LANG_DATA . "&amp;" . NV_NAME_VARIABLE . "=" . $module_name . "/" . $cbdoan['id']."-".change_alias($cbdoan['hoten']));
-    }
-	else 
-	{
-		$xtpl->assign( 'DETAIL', NV_BASE_SITEURL . "index.php?" . NV_LANG_VARIABLE . "=" . NV_LANG_DATA . "&amp;" . NV_NAME_VARIABLE . "=" . $module_name  . "&amp;" . NV_OP_VARIABLE . "=detail/" . $cbdoan['id']."-".change_alias($cbdoan['hoten']));
-    }	
+
+	$xtpl->assign( 'DETAIL', NV_BASE_SITEURL . "index.php?" . NV_LANG_VARIABLE . "=" . NV_LANG_DATA . "&amp;" . NV_NAME_VARIABLE . "=" . $module_name  . "&amp;" . NV_OP_VARIABLE . "=detail/" . $cbdoan['id']."-".change_alias($cbdoan['hoten']));
+	
             
     //Bat tat dia chi tai toplip
     if(!empty($cbdoan['diachi']))

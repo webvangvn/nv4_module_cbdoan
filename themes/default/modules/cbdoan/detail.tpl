@@ -68,13 +68,13 @@
    <tr>
     <td><span class="icon_dot">{LANG.chucvu}</td>
     <td colspan="2">
-		<span class="cv1">{ROW.CHUCVU1}</span>
+		<span class="cv1">{ROW.chucvu1}</span>
 		<!-- BEGIN: cv2 -->
-			<span class="cv2">{ROW.CHUCVU2}</span>
+			<span class="cv2">{ROW.chucvu2}</span>
 		<!-- END: cv2 -->
 		
 		<!-- BEGIN: cv3 -->
-			<span class="cv3">{ROW.CHUCVU3}</span>
+			<span class="cv3">{ROW.chucvu3}</span>
 		<!-- END: cv3 -->
 	</td>
   </tr>
