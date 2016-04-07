@@ -33,8 +33,9 @@ if ( $nv_Request->isset_request( 'config', 'post' ) )
     {
         $db->query( "REPLACE INTO " . NV_CONFIG_GLOBALTABLE . " (lang, module, config_name, config_value) VALUES('" . NV_LANG_DATA . "', '" . $module_name  . "', '" . $config_name  . "', '" . $config_value  . "')" );
     }
+	$nv_Cache->delMod('config');
+    $nv_Cache->delMod($module_name);
 
-    nv_del_moduleCache( $module_name );
 
     Header( "Location: " . NV_BASE_ADMINURL . "index.php?" . NV_NAME_VARIABLE . "=" . $module_name . "&" . NV_OP_VARIABLE . "=config" );
     die();
