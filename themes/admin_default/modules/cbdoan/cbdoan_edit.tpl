@@ -180,26 +180,6 @@
 	</form>
 	{CBDOAN_nvdoan}
 	
-	<script type="text/javascript">
-	//<![CDATA[
-	document.getElementById('add_cbdoan').setAttribute("autocomplete", "off");
-	$(function() {
-
-		$("#birthday").datepicker({
-			showOn : "both",
-			dateFormat : "dd/mm/yy",
-			changeMonth : true,
-			changeYear : true,
-			showOtherMonths : true,
-			buttonImage : nv_siteroot + "images/calendar.gif",
-			buttonImageOnly : true,
-			yearRange: "-99:+0"
-		});
-
-
-	});
-	//]]>
-</script>	
 <script type="text/javascript">
 	//<![CDATA[
 	document.getElementById('add_cbdoan').setAttribute("autocomplete", "off");
@@ -210,7 +190,7 @@
 			changeMonth : true,
 			changeYear : true,
 			showOtherMonths : true,
-			buttonImage : nv_siteroot + "images/calendar.gif",
+			buttonImage : nv_base_siteurl + "assets/images/calendar.gif",
 			buttonImageOnly : true,
 			yearRange: "-99:+0"
 		});
