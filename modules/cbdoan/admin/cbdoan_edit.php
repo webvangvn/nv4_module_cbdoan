@@ -89,24 +89,24 @@ if ( $nv_Request->get_int( 'save', 'post' ) == 1 )
 	
     //dua thong tin tu form vao mang
     $cb_doan['id'] = $nv_Request->get_string ('id', 'post','');
-    $cb_doan['ten'] = $nv_Request->get_string ('ten', 'post','');
-    $cb_doan['ngsinh'] = $nv_Request->get_string ('ngsinh', 'post',0);
-    $cb_doan['gt'] = $nv_Request->get_int ('gt', 'post','');    
-    $cb_doan['avt'] = $nv_Request->get_string ('avt', 'post','');
-    $cb_doan['nvdoan'] = $nv_Request->get_string ('nvdoan', 'post',0);    
-    $cb_doan['dang'] = $nv_Request->get_int ('dang', 'post','');
-    $cb_doan['nvdang'] = $nv_Request->get_string ('nvdang', 'post',0);    
-    $cb_doan['que'] = $nv_Request->get_string ('que', 'post','');
-    $cb_doan['diachi'] = $nv_Request->get_string ('diachi', 'post','');
-    $cb_doan['madvi'] = $nv_Request->get_int ('madvi', 'post','');
-    $cb_doan['macvu1'] = $nv_Request->get_int ('macvu1', 'post','');
-    $cb_doan['macvu2'] = $nv_Request->get_int ('macvu2', 'post','');
-    $cb_doan['macvu3'] = $nv_Request->get_int ('macvu3', 'post','');
-    $cb_doan['email'] = $nv_Request->get_string ('email', 'post','');
-    $cb_doan['yahoo'] = $nv_Request->get_string ('yahoo', 'post','');
-    $cb_doan['skype'] = $nv_Request->get_string ('skype', 'post','');
-    $cb_doan['phone'] = $nv_Request->get_string ('phone', 'post','');
-    $cb_doan['web'] = $nv_Request->get_string ('web', 'post','');
+    $cbdoan['ten'] = $nv_Request->get_string ('ten', 'post','');
+    $cbdoan['ngsinh'] = $nv_Request->get_string ('ngsinh', 'post','');
+    $cbdoan['gt'] = $nv_Request->get_int ('gt', 'post', 1); 
+    $cbdoan['avt'] = $nv_Request->get_string ('avt', 'post','');
+    $cbdoan['nvdoan'] = $nv_Request->get_string ('nvdoan', 'post','');    
+    $cbdoan['dang'] = $nv_Request->get_int ('dang', 'post',0);
+    $cbdoan['nvdang'] = $nv_Request->get_string ('nvdang', 'post','');    
+    $cbdoan['que'] = $nv_Request->get_string ('que', 'post','');
+    $cbdoan['diachi'] = $nv_Request->get_string ('diachi', 'post','');
+    $cbdoan['madvi'] = $nv_Request->get_int ('madvi', 'post',0);
+    $cbdoan['macvu1'] = $nv_Request->get_int ('macvu1', 'post',0);
+    $cbdoan['macvu2'] = $nv_Request->get_int ('macvu2', 'post',0);
+    $cbdoan['macvu3'] = $nv_Request->get_int ('macvu3', 'post',0);
+    $cbdoan['email'] = $nv_Request->get_string ('email', 'post','');
+    $cbdoan['yahoo'] = $nv_Request->get_string ('yahoo', 'post','');
+    $cbdoan['skype'] = $nv_Request->get_string ('skype', 'post','');
+    $cbdoan['phone'] = $nv_Request->get_string ('phone', 'post','');
+    $cbdoan['web'] = $nv_Request->get_string ('web', 'post','');
     $bodytext = $nv_Request->get_string( 'tt', 'post','' );
 	$cbdoan['tt'] = defined( 'NV_EDITOR' ) ? nv_nl2br( $bodytext, '' ) : nv_nl2br( nv_htmlspecialchars( strip_tags( $bodytext ) ), '<br />' );
 	
